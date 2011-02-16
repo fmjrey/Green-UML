@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin
+   id="edu.buffalo.cse.green.relationship.generalization"
+   name="GreenGeneralizationRelationship Plug-in"
+   version="3.5.0"
+   provider-name="University at Buffalo, State University of New York">
+
+   <runtime>
+      <library name="GreenGeneralizationRelationship.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.draw2d"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="edu.buffalo.cse.green"/>
+   </requires>
+
+   <extension point="edu.buffalo.cse.green.relationships" id="edu.buffalo.cse.green.relationship.generalization" name="Generalization">
+      <controller class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <generator class="edu.buffalo.cse.green.relationship.generalization.GeneralizationGenerator"/>
+      <recognizer class="edu.buffalo.cse.green.relationship.generalization.GeneralizationRecognizer"/>
+      <remover class="edu.buffalo.cse.green.relationship.generalization.GeneralizationRemover"/>
+      <validity
+            classToClass="1"
+            classToEnum=""
+            classToInterface=""
+			enumToClass=""
+			enumToEnum=""
+			enumToInterface=""
+            interfaceToClass=""
+            interfaceToEnum=""
+            interfaceToInterface="1"/>
+   </extension>
+</plugin>

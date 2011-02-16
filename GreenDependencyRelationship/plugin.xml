@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin
+   id="edu.buffalo.cse.green.relationship.dependency"
+   name="GreenDependencyRelationship Plug-in"
+   version="3.5.0"
+   provider-name="University at Buffalo, State University of New York">
+
+   <runtime>
+      <library name="GreenDependencyRelationship.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.draw2d"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="edu.buffalo.cse.green"/>
+      <import plugin="org.eclipse.jface"/>
+   </requires>
+
+   <extension point="edu.buffalo.cse.green.relationships" id="edu.buffalo.cse.green.relationship.dependency.instance" name="Dependency">
+      <controller class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart" label="Instantiation"/>
+      <generator class="edu.buffalo.cse.green.relationship.dependency.DependencyIGenerator"/>
+      <recognizer class="edu.buffalo.cse.green.relationship.dependency.DependencyIRecognizer"/>
+      <remover class="edu.buffalo.cse.green.relationship.dependency.DependencyIRemover"/>
+      <validity
+            classToClass="1"
+            classToEnum=""
+            classToInterface="1"
+			enumToClass="1"
+			enumToEnum=""
+			enumToInterface="1"
+            interfaceToClass=""
+            interfaceToEnum=""
+            interfaceToInterface=""/>
+   </extension>
+
+   <extension point="edu.buffalo.cse.green.relationships" id="edu.buffalo.cse.green.relationship.dependency.variable" name="Dependency">
+      <controller class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart" label="Local Assignment"/>
+      <generator class="edu.buffalo.cse.green.relationship.dependency.DependencyLGenerator"/>
+      <recognizer class="edu.buffalo.cse.green.relationship.dependency.DependencyLRecognizer"/>
+      <remover class="edu.buffalo.cse.green.relationship.dependency.DependencyLRemover"/>
+      <validity
+            classToClass="1"
+            classToEnum=""
+            classToInterface="1"
+			enumToClass="1"
+			enumToEnum=""
+			enumToInterface="1"
+            interfaceToClass=""
+            interfaceToEnum=""
+            interfaceToInterface=""/>
+   </extension>
+</plugin>

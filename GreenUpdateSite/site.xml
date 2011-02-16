@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://www.cse.buffalo.edu/faculty/alphonce/green/">
+      Green Update Site
+   </description>
+   <feature url="features/GreenSVGSave_1.0.0.jar" id="GreenSVGSave" version="1.0.0" os="linux,macosx,win32" ws="gtk,win32" nl="en" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenAddOns"/>
+   </feature>
+   <feature url="features/GreenRelationships_3.1.0.jar" id="GreenRelationships" version="3.1.0" os="linux,macosx,win32" ws="gtk,win32" nl="en" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/Green_3.1.0.Release.jar" id="Green" version="3.1.0.Release" os="linux,macosx,win32" ws="gtk,win32" nl="en" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/Green_3.5.0.jar" id="Green" version="3.5.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/GreenRelationships_3.5.0.jar" id="GreenRelationships" version="3.5.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/GreenSVGSave_3.5.0.jar" id="GreenSVGSave" version="3.5.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenAddOns"/>
+   </feature>
+   <feature url="features/Green_3.4.0.jar" id="Green" version="3.4.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/GreenRelationships_3.4.0.jar" id="GreenRelationships" version="3.4.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenCategory"/>
+   </feature>
+   <feature url="features/GreenSVGSave_3.4.0.jar" id="GreenSVGSave" version="3.4.0" os="linux,macosx,win32" ws="gtk,win32" arch="ia64,ia64_32,PA_RISC,ppc,sparc,x86,x86_64">
+      <category name="GreenAddOns"/>
+   </feature>
+   <category-def name="GreenCategory" label="Green">
+      <description>
+         Green Components
+      </description>
+   </category-def>
+   <category-def name="GreenAddOns" label="Green Add-Ons"/>
+</site>

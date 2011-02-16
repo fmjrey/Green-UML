@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin
+   id="edu.buffalo.cse.green.save.svg"
+   name="Green SVG Plug-in"
+   version="3.5.0"
+   provider-name="University at Buffalo, State University of New York">
+   
+   <runtime>
+      <library name="GreenSVG.jar">
+         <export name="*" />
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.gmf.bridge"/>
+      <import plugin="org.eclipse.gmf.codegen.edit"/>
+      <import plugin="org.eclipse.gmf.ecore.editor"/>
+      <import plugin="org.eclipse.gmf.graphdef.edit"/>
+      <import plugin="org.eclipse.gmf.map.edit"/>
+      <import plugin="org.eclipse.gmf.runtime.common.ui.action.ide"/>
+      <import plugin="org.eclipse.gmf.runtime.common.ui.services.dnd.ide"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.properties"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <import plugin="org.eclipse.gmf.runtime.draw2d.ui.render.awt"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.type.ui"/>
+      <import plugin="org.eclipse.gmf.tooldef.edit"/>
+      <import plugin="org.eclipse.gmf.xpand.editor"/>
+      <import plugin="org.apache.batik.svggen"/>
+      <import plugin="org.apache.batik.ext.awt"/>
+      <import plugin="edu.buffalo.cse.green"/>
+   </requires>
+
+   <extension point="edu.buffalo.cse.green.saveFormat">
+      <format class="edu.buffalo.cse.green.editor.save.SVGFormat"/>
+   </extension>
+   
+</plugin>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin
+   id="edu.buffalo.cse.green.relationship.realization"
+   name="GreenRealizationRelationship Plug-in"
+   version="3.5.0"
+   provider-name="University at Buffalo, State University of New York">
+
+   <runtime>
+      <library name="GreenRealizationRelationship.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.draw2d"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="edu.buffalo.cse.green"/>
+   </requires>
+
+   <extension point="edu.buffalo.cse.green.relationships" id="edu.buffalo.cse.green.relationship.realization" name="Realization">
+      <controller class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <generator class="edu.buffalo.cse.green.relationship.realization.RealizationGenerator"/>
+      <recognizer class="edu.buffalo.cse.green.relationship.realization.RealizationRecognizer"/>
+      <remover class="edu.buffalo.cse.green.relationship.realization.RealizationRemover"/>
+      <validity
+            classToClass=""
+            classToEnum=""
+            classToInterface="1"
+			enumToClass=""
+			enumToEnum=""
+			enumToInterface="1"
+            interfaceToClass=""
+            interfaceToEnum=""
+            interfaceToInterface=""/>
+   </extension>
+</plugin>

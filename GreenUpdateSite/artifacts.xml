@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='Green Update Site - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.compressed' value='false'/>
+    <property name='p2.timestamp' value='1258672593233'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='73'>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6643'/>
+        <property name='download.size' value='6643'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.1.0.Release'>
+      <properties size='2'>
+        <property name='artifact.size' value='6477'/>
+        <property name='download.size' value='6477'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.1.0.Release'>
+      <properties size='2'>
+        <property name='artifact.size' value='6480'/>
+        <property name='download.size' value='6480'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6429'/>
+        <property name='download.size' value='6429'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5579'/>
+        <property name='download.size' value='5579'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.5.0'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='5579'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='396252'/>
+        <property name='download.size' value='396252'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.1.0.RC1'>
+      <properties size='3'>
+        <property name='artifact.size' value='652345'/>
+        <property name='download.size' value='652345'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='537236'/>
+        <property name='download.size' value='537236'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5102'/>
+        <property name='download.size' value='5102'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='390901'/>
+        <property name='download.size' value='390901'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6705'/>
+        <property name='download.size' value='6705'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5285'/>
+        <property name='download.size' value='5285'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5636'/>
+        <property name='download.size' value='5636'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.1.0.RC1'>
+      <properties size='3'>
+        <property name='artifact.size' value='652343'/>
+        <property name='download.size' value='652343'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6481'/>
+        <property name='download.size' value='6481'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='652582'/>
+        <property name='download.size' value='652582'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5956'/>
+        <property name='download.size' value='5956'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.1.0.RC2'>
+      <properties size='3'>
+        <property name='artifact.size' value='401196'/>
+        <property name='download.size' value='401196'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5560'/>
+        <property name='download.size' value='5560'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5252'/>
+        <property name='download.size' value='5252'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4825'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='6471'/>
+        <property name='download.size' value='6471'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='11844'/>
+        <property name='download.size' value='11844'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5870'/>
+        <property name='download.size' value='5870'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5560'/>
+        <property name='download.size' value='5560'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='11811'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.1.0.RC2'>
+      <properties size='3'>
+        <property name='artifact.size' value='652343'/>
+        <property name='download.size' value='652343'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='7376'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5410'/>
+        <property name='download.size' value='5410'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5888'/>
+        <property name='download.size' value='5888'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.1.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5891'/>
+        <property name='download.size' value='5891'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='652582'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='6361'/>
+        <property name='download.size' value='6361'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='3.5.0'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='5659'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5876'/>
+        <property name='download.size' value='5876'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='4973'/>
+        <property name='download.size' value='4973'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7391'/>
+        <property name='download.size' value='7391'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='2227'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7583'/>
+        <property name='download.size' value='7583'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='12003'/>
+        <property name='download.size' value='12003'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='537399'/>
+        <property name='download.size' value='537399'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='2.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7582'/>
+        <property name='download.size' value='7582'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7384'/>
+        <property name='download.size' value='7384'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenRelationships' version='2.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5892'/>
+        <property name='download.size' value='5892'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.5.0'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='6088'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.1.0.RC1'>
+      <properties size='3'>
+        <property name='artifact.size' value='407096'/>
+        <property name='download.size' value='407096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='2420'/>
+        <property name='download.size' value='2420'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='4825'/>
+        <property name='download.size' value='4825'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='2499'/>
+        <property name='download.size' value='2499'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.1.0.RC2'>
+      <properties size='2'>
+        <property name='artifact.size' value='6474'/>
+        <property name='download.size' value='6474'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.realization' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='5098'/>
+        <property name='download.size' value='5098'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='3.4.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5951'/>
+        <property name='download.size' value='5951'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.generalization' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='5285'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5971'/>
+        <property name='download.size' value='5971'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7376'/>
+        <property name='download.size' value='7376'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6488'/>
+        <property name='download.size' value='6488'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='11811'/>
+        <property name='download.size' value='11811'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.association' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='7644'/>
+        <property name='download.size' value='7644'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='1.0.1'>
+      <properties size='3'>
+        <property name='artifact.size' value='2427'/>
+        <property name='download.size' value='2427'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='5974'/>
+        <property name='download.size' value='5974'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='12086'/>
+        <property name='download.size' value='12086'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='6088'/>
+        <property name='download.size' value='6088'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.composition' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='6429'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='652342'/>
+        <property name='download.size' value='652342'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='652339'/>
+        <property name='download.size' value='652339'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='Green' version='3.1.0.RC1'>
+      <properties size='2'>
+        <property name='artifact.size' value='6476'/>
+        <property name='download.size' value='6476'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.relationship.dependency' version='3.1.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='11837'/>
+        <property name='download.size' value='11837'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='3.5.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='2227'/>
+        <property name='download.size' value='2227'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='537236'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.help' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='652341'/>
+        <property name='download.size' value='652341'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='edu.buffalo.cse.green.save.svg' version='3.4.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='2500'/>
+        <property name='download.size' value='2500'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='GreenSVGSave' version='3.5.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5659'/>
+        <property name='download.size' value='5659'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

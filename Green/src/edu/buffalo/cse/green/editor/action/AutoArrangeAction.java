@@ -13,31 +13,11 @@
  */
 package edu.buffalo.cse.green.editor.action;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.geometry.Dimension;
-import org.eclipse.draw2d.geometry.Point;
-import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
 
-import ccvisu.CCVisu;
-import ccvisu.GraphData;
-import ccvisu.GraphEdgeInt;
-import ccvisu.GraphEvent;
-import ccvisu.GraphEventListener;
-import ccvisu.GraphVertex;
-
 import edu.buffalo.cse.green.editor.DiagramEditor;
-import edu.buffalo.cse.green.editor.model.AbstractModel;
-import edu.buffalo.cse.green.editor.model.RelationshipModel;
-import edu.buffalo.cse.green.editor.model.RootModel;
-import edu.buffalo.cse.green.editor.model.TypeModel;
 import edu.buffalo.cse.green.editor.model.commands.AutoArrangeCommand;
 
 /**

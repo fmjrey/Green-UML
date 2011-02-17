@@ -3,7 +3,7 @@
 <plugin
    id="edu.buffalo.cse.green.relationship.association"
    name="GreenAssociationRelationship Plug-in"
-   version="3.5.0"
+   version="3.5.0.qualifier"
    provider-name="University at Buffalo, State University of New York">
 
    <runtime>

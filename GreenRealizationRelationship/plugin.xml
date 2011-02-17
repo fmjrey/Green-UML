@@ -3,8 +3,7 @@
 <plugin
    id="edu.buffalo.cse.green.relationship.realization"
    name="GreenRealizationRelationship Plug-in"
-   version="3.5.0"
-   provider-name="University at Buffalo, State University of New York">
+   version="3.5.0.qualifier">
 
    <runtime>
       <library name="GreenRealizationRelationship.jar">

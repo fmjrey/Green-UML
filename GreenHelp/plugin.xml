@@ -3,7 +3,7 @@
 <plugin
    id="edu.buffalo.cse.green.help"
    name="Green Help"
-   version="3.5.0"
+   version="3.5.0.qualifier"
    provider-name="University at Buffalo, State University of New York">
    <requires>
       <import plugin="org.eclipse.help"/>

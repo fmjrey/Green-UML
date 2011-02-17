@@ -2,7 +2,7 @@
 <feature
       id="Green"
       label="Green"
-      version="3.5.0"
+      version="3.5.0.qualifier"
       provider-name="UB CSE"
       plugin="edu.buffalo.cse.green"
       os="linux,macosx,win32"

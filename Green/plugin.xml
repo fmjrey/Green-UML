@@ -11,6 +11,11 @@
       <library name="Green.jar">
          <export name="*"/>
       </library>
+      <library name="lib/CCVisu-3.0.jar">
+         <export
+               name="*">
+         </export>
+      </library>
    </runtime>
 
    <requires>

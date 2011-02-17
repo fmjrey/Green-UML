@@ -19,14 +19,14 @@ import java.util.Vector;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.commands.Command;
 
-import ccvisu.CCVisu;
 import ccvisu.GraphData;
-import ccvisu.GraphEdgeInt;
-import ccvisu.GraphVertex;
+import ccvisu.GraphEdge;
 import ccvisu.Minimizer;
-
+import ccvisu.MinimizerBarnesHut;
+import ccvisu.Options;
+import edu.buffalo.cse.green.ccvisu.CCVisuUtil;
+import edu.buffalo.cse.green.ccvisu.GraphVertex;
 import edu.buffalo.cse.green.editor.DiagramEditor;
-import edu.buffalo.cse.green.editor.controller.AbstractPart;
 import edu.buffalo.cse.green.editor.model.AbstractModel;
 import edu.buffalo.cse.green.editor.model.RelationshipModel;
 import edu.buffalo.cse.green.editor.model.RootModel;
@@ -120,8 +120,7 @@ for(AbstractModel m : allModels) {
 			if(m instanceof TypeModel)
 			{
 				final TypeModel n = (TypeModel)m;
-				GraphVertex me = new GraphVertex();
-				me.me = n;
+				GraphVertex me = new GraphVertex(n);
 				me.id = gd.vertices.size();
 				me.name = "" + me.id;
 				Dimension size = editor.getRootPart().getPartFromModel(n).getFigure().getSize(); 
@@ -129,13 +128,15 @@ for(AbstractModel m : allModels) {
 							n.getOutgoingEdges().size() + (size.height * size.width /20000.0f);
 				//System.out.println("1: " + size.height + ", 2: " + size.width);
 				me.isSource = me.degree > 0;
+				me.pos.x = n.getLocation().x/200.0f;
+				me.pos.y = n.getLocation().y/200.0f;
 				if( !gd.vertices.contains(me) )
 				{
 					gd.vertices.add(me);
 					_m.add(n);
 				}
 				else
-					me = gd.vertices.get( gd.vertices.indexOf(me) );
+					me = (GraphVertex)gd.vertices.get( gd.vertices.indexOf(me) );
 				/*int card = 0, i=0;
 				card += n.getIncomingEdges().size();
 				card += n.getOutgoingEdges().size();
@@ -158,29 +159,33 @@ for(AbstractModel m : allModels) {
 				for(RelationshipModel e : n.getOutgoingEdges())
 				{
 					TypeModel y = e.getTargetModel();
-					GraphVertex you = new GraphVertex();
-					you.me = y;
+					if (n.equals(y)) continue; // no reflexive graph
+					GraphVertex you = new GraphVertex(y);
 					you.id = gd.vertices.size();
 					you.name = "" + you.id;
 					you.degree = y.getIncomingEdges().size() +
 								 y.getOutgoingEdges().size() /*(y.getSize().height + y.getSize().width)*/;
 					you.isSource = you.degree > 0;
+					you.pos.x = y.getLocation().x/200.0f;
+					you.pos.y = y.getLocation().y/200.0f;
 					if( !gd.vertices.contains(you) )
 					{
 						gd.vertices.add(you);
 						_m.add(y);
 					}
 					else
-						you = gd.vertices.get( gd.vertices.indexOf(you) );
+						you = (GraphVertex) gd.vertices.get( gd.vertices.indexOf(you) );
 					
 					// have me, you
 					// create edge
 					
-					GraphEdgeInt ed = new GraphEdgeInt();
-					ed.x = me.id;
-					ed.y = you.id;
-					ed.w = 1.0f;
-					gd.edges.add(ed);
+					if (me.id!=you.id) {
+						GraphEdge ed = new GraphEdge();
+						ed.x = me.id;
+						ed.y = you.id;
+						ed.w = 1.0f;
+						gd.edges.add(ed);
+					}
 				}
 			}
 		}
@@ -189,16 +194,10 @@ for(AbstractModel m : allModels) {
 		
 		//CCVisu.initializeLayout(gd, 2, null);
 		
-		gd.pos = new float[gd.vertices.size()][3];
-		for( int i=0; i<gd.vertices.size(); i++)
-		{
-			gd.pos[i][0] = gd.vertices.get(i).me.getLocation().x/200.0f;
-			gd.pos[i][1] = gd.vertices.get(i).me.getLocation().y/200.0f;
-		}
-		
-		Minimizer me = CCVisu.computeLayout(gd, 1000, 3, 1, false, false, 2.001f, null, false/*, new GraphEventListener() {
-
-			public void onGraphEvent(GraphEvent evt) {
+		Options options = CCVisuUtil.newOptions(gd, 100, 3, 1, false, false, 2.001f, null, false);
+		Minimizer me = new MinimizerBarnesHut(options);
+		/* new GraphEventListener() {
+		public void onGraphEvent(GraphEvent evt) {
 				for( int i=0; i<fn.vertices.size(); i++ )
 				{
 					System.out.println("putting vertex " + i + " to (" + fn.pos[i][0] + ", " + fn.pos[i][1] + ").");
@@ -212,26 +211,26 @@ for(AbstractModel m : allModels) {
 				}
 			}
 			
-		}*/);
+		}*/
 		
-		me.minimizeEnergy(15);
+		me.minimizeEnergy();
 		
 		//System.out.println("computed " + gd.vertices.size() + " vertices.");
 		
 		// normalize
 		float lx = 999, ly = 999;
-		for( float[] e : gd.pos )
+		for( ccvisu.GraphVertex v : gd.vertices )
 		{
-			if( e[0] < lx )
-				lx = e[0];
-			if( e[1] < ly )
-				ly = e[1];
+			if( v.pos.x < lx )
+				lx = v.pos.x;
+			if( v.pos.y < ly )
+				ly = v.pos.y;
 		}
 		
-		for( float[] e : gd.pos )
+		for( ccvisu.GraphVertex v : gd.vertices )
 		{
-			e[0] -= lx;
-			e[1] -= ly;
+			v.pos.x -= lx;
+			v.pos.y -= ly;
 		}
 		
 		opos = new int[_m.size()][2];
@@ -242,9 +241,10 @@ for(AbstractModel m : allModels) {
 			//System.out.println("putting vertex " + i + " to (" + gd.pos[i][0] + ", " + gd.pos[i][1] + ").");
 			opos[i][0] = _m.get(i).getLocation().x;
 			opos[i][1] = _m.get(i).getLocation().y;
-			gd.vertices.get(i).me.setLocation((int)(gd.pos[i][0]*200), (int)(gd.pos[i][1]*200));
-			npos[i][0] = gd.vertices.get(i).me.getLocation().x;
-			npos[i][1] = gd.vertices.get(i).me.getLocation().y;
+			GraphVertex v = (GraphVertex) gd.vertices.get(i); 
+			v.me.setLocation((int)(v.pos.x*200), (int)(v.pos.y*200));
+			npos[i][0] = v.me.getLocation().x;
+			npos[i][1] = v.me.getLocation().y;
 		}
 		
 		/*class noode {

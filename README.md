@@ -10,7 +10,7 @@ Branches
 -------
 
 * [master](/fmjrey/green-uml/tree/master) -- master branch that tracks the original cvs repository trunk
-* [fmjrey](/fmjrey/green-uml/tree/fmjrey) -- own master branch, which merges of the other branches below and may contain other commits
+* [fmjrey](/fmjrey/green-uml/tree/fmjrey) -- own master branch, which merges the other branches below and may contain other commits
 * [fix-create-diagram](/fmjrey/grenn-uml/tree/fix-create-diagram) -- fix bug when creating new diagram from package
 * [version-qualifier](/fmjrey/green-uml/tree/version-qualifier) -- added version qualifier on each plugin and feature version (e.g. 3.5.0.qualifier)
 * [ccvisu-3.0](/fmjrey/green-uml/tree/ccvisu-3.0) -- upgrade ccvisu used internally from v2.1 to 3.0

@@ -414,7 +414,8 @@ public abstract class RelationshipVisitor extends ASTVisitor {
 	 */
 	protected IType getCurrentType() {
 		AbstractTypeDeclaration typeDec = getCurrentTypeDeclaration();
-		return (IType) typeDec.resolveBinding().getJavaElement();
+		ITypeBinding type = typeDec.resolveBinding(); 
+		return type!=null?(IType)type.getJavaElement():null;
 	}
 	
 	/**

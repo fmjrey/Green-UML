@@ -220,6 +220,7 @@ public final class PlugIn extends AbstractUIPlugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
+		GreenException.warn("GreenUML Plugin activated");
 
 		try {
 			// load plugins: save types

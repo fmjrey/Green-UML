@@ -136,6 +136,7 @@ import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.internal.core.JarPackageFragmentRoot;
 import org.eclipse.jdt.internal.ui.JavaPluginImages;
 import org.eclipse.jface.action.ActionContributionItem;
 import org.eclipse.jface.action.IAction;
@@ -199,6 +200,7 @@ import edu.buffalo.cse.green.relationships.RelationshipGroup;
 import edu.buffalo.cse.green.relationships.RelationshipRecognizer;
 import edu.buffalo.cse.green.relationships.RelationshipSubtype;
 import edu.buffalo.cse.green.types.ITypeProperties;
+import edu.buffalo.cse.green.util.JavaProjectUtil;
 import edu.buffalo.cse.green.xml.XMLConverter;
 import edu.buffalo.cse.green.xml.XMLNode;
 
@@ -910,7 +912,16 @@ public class DiagramEditor extends GraphicalEditorWithFlyoutPalette implements
 		
 		if (element instanceof IJavaProject) {
 			IJavaProject project = (IJavaProject) element;
-			packFrag = project.getPackageFragments()[0];
+			IJavaElement[] defaultPackages = JavaProjectUtil.getDefaultSourcePackages(project, false);
+			if (defaultPackages.length>0) {
+				IJavaElement javaElement = defaultPackages[0];
+				if (javaElement instanceof IPackageFragment) {
+					packFrag = (IPackageFragment)javaElement;
+				} else {
+					packFrag = (IPackageFragment) javaElement.getAncestor(
+							IJavaElement.PACKAGE_FRAGMENT);					
+				}
+			}
 		} else if (!(element instanceof IPackageFragment)) {
 			packFrag = (IPackageFragment) element.getAncestor(
 					IJavaElement.PACKAGE_FRAGMENT);

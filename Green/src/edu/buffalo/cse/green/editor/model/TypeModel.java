@@ -27,6 +27,7 @@ import static edu.buffalo.cse.green.preferences.PreferenceInitializer.P_DISPLAY_
 import static org.eclipse.jdt.ui.refactoring.RenameSupport.UPDATE_REFERENCES;
 
 import java.lang.reflect.Constructor;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -652,7 +653,7 @@ public class TypeModel extends MemberModel<CompartmentModel, RootModel, IType> {
 		ITypeProperties properties = PlugIn.getTypeProperties().get(key);
 		
 		if (properties == null) {
-			GreenException.illegalOperation(GRERR_TYPE_UNSUPPORTED);
+			GreenException.illegalOperation(GRERR_TYPE_UNSUPPORTED + ":\nkey= " + key);
 		}
 		
 		return properties;
@@ -663,13 +664,20 @@ public class TypeModel extends MemberModel<CompartmentModel, RootModel, IType> {
 	 * @return A string representation of the kind of type (e.g. class, enum).
 	 */
 	private static String getTypeAsString(IType type) {
+		Collection<ITypeProperties> typeP = PlugIn.getAvailableTypes();
+		if (typeP.isEmpty()) {
+			GreenException.critical(new GreenException("typeP is empty"));
+			return null;
+		} else {
+			GreenException.warn("typeP="+typeP.toString());
+		}
 		for (ITypeProperties typeProp : PlugIn.getAvailableTypes()) {
 			if (typeProp.supportsType(type)) {
 				return typeProp.getLabel();
 			}
 		}
 		
-		GreenException.illegalOperation(GRERR_TYPE_UNSUPPORTED);
+		GreenException.illegalOperation(GRERR_TYPE_UNSUPPORTED + ":\nIType= " + type.getFullyQualifiedName());
 		return null;
 	}
 }

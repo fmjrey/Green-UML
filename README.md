@@ -6,11 +6,18 @@ cloned by fmjrey
 This project is a clone of the original project at [http://green.sourceforge.net/](http://green.sourceforge.net/).
 Its purpose is not to fork development of the original project but simply to make it easier to share some changes that hopefully will be merged back into the original.
 
-Branches
--------
+Main Branches
+-------------
+
+*REBASE WARNING*
+The only branches that will not be rebased are the main branches listed below. If you are cloning this repository you are strongly advised to create your own branches based on these. Other branches like topic branches may be rebased over time in order to keep track with upstream changes.
 
 * [master](/fmjrey/green-uml/tree/master) -- master branch that tracks the original cvs repository trunk
 * [fmjrey](/fmjrey/green-uml/tree/fmjrey) -- own master branch, which merges the other branches below and may contain other commits
+
+Topic Branches
+--------------
+
 * [fix-create-diagram](/fmjrey/green-uml/tree/fix-create-diagram) -- fix bug when creating new diagram from package
 * [version-qualifier](/fmjrey/green-uml/tree/version-qualifier) -- added version qualifier on each plugin and feature version (e.g. 3.5.0.qualifier)
 * [ccvisu-3.0](/fmjrey/green-uml/tree/ccvisu-3.0) -- upgrade ccvisu used internally from v2.1 to 3.0
